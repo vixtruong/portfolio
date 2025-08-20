@@ -11,8 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Portfolio - Truong Le Duc Vi",
-  description: "Personal portfolio built with Next.js",
+  title: "Portfolio - Vixtruong",
+  description: "Personal portfolio",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
