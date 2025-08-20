@@ -19,7 +19,7 @@ export default function Header() {
       {/* Logo */}
       <Link
         href="/"
-        className="text-2xl font-bold text-purple-400 hover:text-white transition"
+        className="text-2xl font-bold text-blue-400 hover:text-white transition"
       >
         <span>VIXTRUONG</span>
       </Link>
@@ -30,9 +30,9 @@ export default function Header() {
           <Link
             key={item.path}
             href={item.path}
-            className={`hover:text-purple-400 transition ${
+            className={`hover:text-blue-400 transition ${
               pathname === item.path
-                ? "text-purple-300 font-semibold"
+                ? "text-blue-300 font-semibold"
                 : "text-gray-200"
             }`}
           >
