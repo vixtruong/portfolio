@@ -18,7 +18,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="bg-gradient-to-r from-blue-800 to-indigo-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <div className="flex items-start gap-4 mb-4">
+      <div className="flex items-center gap-4 mb-4">
         <Image
           src={img}
           alt={title}
