@@ -3,24 +3,33 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center">
-      {/* <Image
+      <Image
         src="/avatar.png"
         alt="avatar"
-        className="w-32 h-32 rounded-full mb-6"
-      /> */}
+        width={256}
+        height={256}
+        quality={100}
+        className="rounded-full mb-6"
+      />
       <h2 className="text-xl">
         Hello! I am <span className="text-indigo-400">Truong Le Duc Vi</span>
       </h2>
       <h1 className="text-4xl font-bold my-2">
-        Judges a book by its <span className="text-purple-400">cover...</span>
+        Building <span className="text-purple-400">frontend</span> and{" "}
+        <span className="text-purple-400">backend</span> with passion
       </h1>
-      <p className="max-w-xl text-gray-300">
-        I{"'"}m a Software Engineer at{" "}
-        <a href="https://facebook.com" className="text-blue-400">
-          Facebook
-        </a>
-        . I design delightful digital products balancing user needs and business
-        goals.
+
+      <p className="max-w-2xl text-gray-300">
+        I am currently a{" "}
+        <span className="text-purple-400">.NET Backend Developer Intern</span>{" "}
+        at SR GROUP and a final-year Software Engineering student aspiring to
+        become a Full-Stack Developer. I have strong skills in C#, ASP.NET Core,
+        RESTful APIs, and SQL databases, alongside a growing interest in
+        front-end technologies. Passionate about building scalable and
+        maintainable web applications, eager to apply and expand my skills in a
+        dynamic environment. Goal-oriented towards becoming a Senior Developer
+        by contributing to meaningful projects and mastering microservices and
+        cloud computing.
       </p>
     </section>
   );

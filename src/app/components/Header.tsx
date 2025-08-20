@@ -9,11 +9,13 @@ export default function Header() {
   const menu = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Lab", path: "/lab" },
+    { name: "Projects", path: "/projects" },
+    { name: "Skills", path: "/skills" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <header className="flex items-center justify-between px-8 py-4 bg-transparent fixed w-full top-0 z-50">
+    <header className="flex items-center justify-between py-4 px-[15%] bg-transparent fixed w-full top-0 z-50">
       {/* Logo */}
       <Link
         href="/"
@@ -23,7 +25,7 @@ export default function Header() {
       </Link>
 
       {/* Menu */}
-      <nav className="flex gap-8">
+      <nav className="flex gap-12 text-xl">
         {menu.map((item) => (
           <Link
             key={item.path}

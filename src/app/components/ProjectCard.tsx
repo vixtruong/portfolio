@@ -9,7 +9,7 @@ type WorkCardProps = {
   time: string; // thêm thời gian
 };
 
-export default function WorkCard({
+export default function ProjectCard({
   title,
   desc,
   img,
@@ -18,17 +18,20 @@ export default function WorkCard({
 }: WorkCardProps) {
   return (
     <div className="bg-gradient-to-r from-purple-800 to-indigo-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <div className="mb-4">
+      <div className="mb-4 flex items-center gap-4">
         <Image
           src={img}
           alt={title}
-          width={100}
-          height={100}
+          width={64}
+          height={64}
           className="rounded-lg object-contain"
         />
+        <div>
+          <h3 className="text-xl font-semibold">{title}</h3>
+          <p className="text-sm text-gray-400">{time}</p>
+        </div>
       </div>
-      <h3 className="text-xl font-semibold mb-1">{title}</h3>
-      <p className="text-sm text-gray-400 mb-2">{time}</p>{" "}
+
       <p className="text-gray-300 line-clamp-3">{desc}</p>
       <Link
         href={link}
@@ -36,7 +39,7 @@ export default function WorkCard({
         rel="noopener noreferrer"
         className="mt-4 inline-block text-sm text-purple-300 underline hover:text-purple-200 transition"
       >
-        Company website
+        View project
       </Link>
     </div>
   );
