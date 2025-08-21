@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   return (
     <footer className="py-6 text-center border-t border-gray-700 mt-10">
