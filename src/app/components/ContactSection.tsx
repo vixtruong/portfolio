@@ -1,6 +1,45 @@
+"use client";
+
 import { Mail, Phone, MapPin, Linkedin, Github, FileDown } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("Message sent!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        const err = await res.json();
+        setStatus(err.error || "Failed to send message");
+      }
+    } catch {
+      setStatus("Error sending message");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -87,24 +126,36 @@ export default function ContactSection() {
             </a>
           </div>
 
-          {/* Form liên hệ nhanh (tùy chọn) */}
-          <form className="space-y-4 bg-indigo-950/40 p-6 rounded-xl shadow-lg">
+          {/* Form liên hệ nhanh */}
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4 bg-indigo-950/40 p-6 rounded-xl shadow-lg"
+          >
             <h3 className="text-xl font-semibold text-white mb-4">
               Send me a message
             </h3>
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-indigo-900/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-indigo-900/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <textarea
+              name="message"
               placeholder="Your Message"
               rows={4}
+              value={formData.message}
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-indigo-900/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <button
@@ -113,6 +164,7 @@ export default function ContactSection() {
             >
               Send Message
             </button>
+            {status && <p className="text-sm text-gray-300 mt-2">{status}</p>}
           </form>
         </div>
       </div>
