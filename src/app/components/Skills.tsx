@@ -1,7 +1,7 @@
 export default function SkillsSection() {
   return (
     <div id="skills" className="space-y-6">
-      <h2 className="text-2xl font-bold text-white">Skills</h2>
+      <h2 className="text-3xl font-bold text-white">Skills</h2>
 
       <div className="text-gray-300 space-y-4">
         {/* Programming Languages */}
