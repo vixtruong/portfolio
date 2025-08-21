@@ -1,43 +1,37 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 export default function Header() {
-  const pathname = usePathname();
-
   const menu = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Skills", path: "/skills" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "home" },
+    { name: "About", path: "about" },
+    { name: "Experiences", path: "experiences" },
+    { name: "Projects", path: "projects" },
+    { name: "Skills", path: "skills" },
+    { name: "Contact", path: "contact" },
   ];
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header className="flex items-center justify-between py-4 px-[15%] bg-transparent fixed w-full top-0 z-50">
-      {/* Logo */}
-      <Link
-        href="/"
-        className="text-2xl font-bold text-blue-400 hover:text-white transition"
+      <span
+        onClick={() => scrollToSection("home")}
+        className="cursor-pointer text-2xl font-bold text-blue-400 hover:text-white transition"
       >
-        <span>VIXTRUONG</span>
-      </Link>
+        VIXTRUONG
+      </span>
 
-      {/* Menu */}
       <nav className="flex gap-12 text-xl">
         {menu.map((item) => (
-          <Link
+          <span
             key={item.path}
-            href={item.path}
-            className={`hover:text-blue-400 transition ${
-              pathname === item.path
-                ? "text-blue-300 font-semibold"
-                : "text-gray-200"
-            }`}
+            onClick={() => scrollToSection(item.path)}
+            className="cursor-pointer text-gray-200 hover:text-blue-400 transition"
           >
             {item.name}
-          </Link>
+          </span>
         ))}
       </nav>
     </header>
