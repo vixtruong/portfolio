@@ -43,7 +43,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="mx-[5%] py-16 bg-gradient-to-r from-indigo-900 to-blue-900 rounded-2xl"
+      className="md:mx-[5%] py-[10%] md:py-16  bg-gradient-to-r from-indigo-900 to-blue-900 rounded-2xl"
     >
       <div className="max-w-[90%] mx-auto">
         <h2 className="text-3xl font-bold text-white text-center mb-12">

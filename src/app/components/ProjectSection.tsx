@@ -26,7 +26,7 @@ const projects = [
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="py-16 px-[10%]">
+    <section id="projects" className="py-16 md:px-[10%]">
       <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((p, i) => {
