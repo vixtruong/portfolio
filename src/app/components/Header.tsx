@@ -4,7 +4,7 @@ export default function Header() {
   const menu = [
     { name: "Home", path: "home" },
     { name: "About", path: "about" },
-    { name: "Experiences", path: "experiences" },
+    { name: "Experience", path: "experience" },
     { name: "Projects", path: "projects" },
     { name: "Skills", path: "skills" },
     { name: "Contact", path: "contact" },
