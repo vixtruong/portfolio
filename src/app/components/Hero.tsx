@@ -2,10 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center"
-    >
+    <section className="min-h-screen flex flex-col justify-center items-center text-center">
       <Image
         src="/avatar.png"
         alt="avatar"

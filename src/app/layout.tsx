@@ -2,6 +2,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Reveal from "@/app/components/Reveal";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -27,7 +28,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="bg-gradient-to-b from-[#0a192f] via-[#0f2747] to-[#112240] text-white font-sans">
         <Header />
-        <main className="container mx-auto px-6">{children}</main>
+        <Reveal>
+          <main className="container mx-auto px-6">{children}</main>\
+        </Reveal>
         <Footer />
       </body>
     </html>

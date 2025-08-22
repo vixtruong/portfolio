@@ -1,50 +1,50 @@
+const frontendSkills = [
+  "HTML",
+  "CSS",
+  "Angular",
+  "ReactJS",
+  "Next.js",
+  "Flutter",
+  "WinForms",
+  "Bootstrap",
+  "Tailwind CSS",
+];
+
+const backendSkills = [
+  "ASP.NET Core MVC",
+  "ASP.NET Core Web API",
+  "RESTful API",
+  "Entity Framework",
+  "Dapper",
+  "LINQ",
+  "Microservices",
+  "JWT",
+  "Ocelot",
+  "Dependency Injection (DI)",
+  "WebSocket",
+  "SignalR",
+  "Redis",
+];
+
+const devOpsSkills = [
+  "Microsoft Azure",
+  "Azure App Services",
+  "Azure SQL Database",
+  "Azure Blob Storage",
+];
+
+const dbSkills = ["SQL Server", "MySQL", "PostgreSQL"];
+
+const tools = [
+  "Visual Studio",
+  "Visual Studio Code",
+  "Postman",
+  "Git",
+  "GitHub",
+  "GitLab",
+];
+
 export default function SkillsSection() {
-  const frontendSkills = [
-    "HTML",
-    "CSS",
-    "Angular",
-    "ReactJS",
-    "Next.js",
-    "Flutter",
-    "WinForms",
-    "Bootstrap",
-    "Tailwind CSS",
-  ];
-
-  const backendSkills = [
-    "ASP.NET Core MVC",
-    "ASP.NET Core Web API",
-    "RESTful API",
-    "Entity Framework",
-    "Dapper",
-    "LINQ",
-    "Microservices",
-    "JWT",
-    "Ocelot",
-    "Dependency Injection (DI)",
-    "WebSocket",
-    "SignalR",
-    "Redis",
-  ];
-
-  const devOpsSkills = [
-    "Microsoft Azure",
-    "Azure App Services",
-    "Azure SQL Database",
-    "Azure Blob Storage",
-  ];
-
-  const dbSkills = ["SQL Server", "MySQL", "PostgreSQL"];
-
-  const tools = [
-    "Visual Studio",
-    "Visual Studio Code",
-    "Postman",
-    "Git",
-    "GitHub",
-    "GitLab",
-  ];
-
   return (
     <div id="skills" className="space-y-6">
       <h2 className="text-3xl font-bold text-white">Skills</h2>
