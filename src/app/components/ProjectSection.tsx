@@ -22,22 +22,39 @@ const projects = [
     link: "https://github.com/vixtruong/dentalcare-netcore-mvc",
     time: "09/2024 – 12/2024",
   },
+  {
+    title: "Bondy (Social Network Platform)",
+    desc: "Mini social network built with Next.js and .NET (microservices). Features: authentication, posts/comments/reactions, real-time chat & notifications via WebSocket/SignalR, background services, Redis caching, and PostgreSQL.",
+    img: "/projects/bondy.png",
+    link: "https://vixtruong-portfolio.vercel.app",
+    time: "09/2025 – Present",
+  },
 ];
 
 export default function ProjectSection() {
   return (
     <section id="projects" className="py-16 md:px-[10%]">
       <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-8">
+
+      <div className="grid md:grid-cols-2 gap-8 items-stretch">
         {projects.map((p, i) => {
           const isLastOdd =
             i === projects.length - 1 && projects.length % 2 !== 0;
+
           return (
             <div
               key={i}
-              className={isLastOdd ? "md:col-span-2 flex justify-center" : ""}
+              className={
+                isLastOdd
+                  ? "md:col-span-2 flex justify-center h-full"
+                  : "h-full"
+              }
             >
-              <div className={isLastOdd ? "md:w-1/2 w-full" : "w-full"}>
+              <div
+                className={
+                  isLastOdd ? "md:w-1/2 w-full h-full" : "w-full h-full"
+                }
+              >
                 <ProjectCard {...p} />
               </div>
             </div>

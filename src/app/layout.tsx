@@ -28,9 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="bg-gradient-to-b from-[#0a192f] via-[#0f2747] to-[#112240] text-white font-sans">
         <Header />
-        <Reveal>
-          <main className="container mx-auto px-6">{children}</main>
-        </Reveal>
+        <main className="container mx-auto px-6">{children}</main>
         <Footer />
       </body>
     </html>

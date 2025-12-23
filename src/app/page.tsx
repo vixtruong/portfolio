@@ -9,9 +9,7 @@ import Reveal from "@/app/components/Reveal";
 export default function Home() {
   return (
     <div id="home">
-      <Reveal>
-        <Hero />
-      </Reveal>
+      <Hero />
 
       {/* About + Skills chung một vùng */}
       <section className="md:mx-[5%] py-[10%] md:py-16 bg-gradient-to-r from-indigo-900 to-blue-900 rounded-2xl">

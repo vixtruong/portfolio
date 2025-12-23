@@ -4,56 +4,47 @@ export default function AboutSection() {
       <h2 className="text-3xl font-bold text-white">About Me</h2>
 
       <p>
-        I am a{" "}
+        I’m a{" "}
         <span className="text-blue-400 font-semibold">
           final-year Software Engineering student
         </span>{" "}
-        with a strong foundation in building scalable and maintainable backend
-        systems using <span className="text-blue-400">C# & ASP.NET Core</span>.
-        My academic training and hands-on project experience have allowed me to
-        work with{" "}
-        <span className="text-blue-400">
-          RESTful APIs, Entity Framework, and SQL databases
-        </span>
-        , while I am actively expanding my frontend skills with modern
-        frameworks such as{" "}
-        <span className="text-blue-400">React, Next.js, and Angular</span> to
-        become a well-rounded{" "}
-        <span className="text-blue-400 font-semibold">
-          Full-Stack Developer
-        </span>
-        .
+        with a strong focus on{" "}
+        <span className="text-blue-400">.NET backend development</span>. I enjoy
+        building scalable and maintainable systems using{" "}
+        <span className="text-blue-400">C# / ASP.NET Core</span>, applying{" "}
+        <span className="text-blue-400">Clean Architecture</span>, and working
+        with <span className="text-blue-400">RESTful APIs</span> and{" "}
+        <span className="text-blue-400">SQL databases</span>.
       </p>
 
       <p>
-        Currently, I am interning as a{" "}
+        I previously interned at{" "}
+        <span className="text-blue-400 font-semibold">SR GROUP</span> as a{" "}
         <span className="text-blue-400 font-semibold">
-          .NET Backend Developer
-        </span>{" "}
-        at SR GROUP, where I contribute to developing high-performance web
-        applications. My responsibilities include designing and implementing
-        RESTful APIs, building background services for scheduled tasks,
-        integrating caching strategies with{" "}
-        <span className="text-blue-400">Redis</span>, and adding real-time
-        features using{" "}
-        <span className="text-blue-400">SignalR & WebSocket</span>. I also
-        collaborate closely with team members to optimize database queries,
-        ensure data consistency, and improve application scalability.
+          .NET Backend Developer Intern
+        </span>
+        , where I implemented high-performance APIs, built{" "}
+        <span className="text-blue-400">background services</span> for scheduled
+        processing, integrated <span className="text-blue-400">Redis</span> for
+        caching/messaging, and delivered real-time updates using{" "}
+        <span className="text-blue-400">SignalR & WebSocket</span>.
       </p>
 
       <p>
-        My long-term goal is to grow into a{" "}
-        <span className="text-blue-400 font-semibold">Senior Developer</span>{" "}
-        who can design and deliver{" "}
-        <span className="text-blue-400">microservices-based architectures</span>{" "}
-        and leverage{" "}
-        <span className="text-blue-400">
-          cloud computing platforms like Microsoft Azure
+        Currently, I’m interning at{" "}
+        <span className="text-blue-400 font-semibold">
+          Hanwha Life Viet Nam
         </span>{" "}
-        to build reliable, distributed, and impactful applications. I am
-        passionate about continuous learning, keeping up with new technologies,
-        and contributing to meaningful projects that create real value for
-        businesses and users.
+        as an{" "}
+        <span className="text-blue-400 font-semibold">
+          IT Application Developer Intern
+        </span>
+        , maintaining .NET services with Clean Architecture and supporting
+        mobile development using{" "}
+        <span className="text-blue-400">React Native</span> +{" "}
+        <span className="text-blue-400">Redux</span>. I’m also learning more
+        about deployment basics such as{" "}
+        <span className="text-blue-400">IIS, Nginx, VPS, and HTTPS/SSL</span>.
       </p>
 
       <a
